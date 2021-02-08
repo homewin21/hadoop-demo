@@ -68,7 +68,7 @@ public class HdfsUtil {
         if (file.isFile()) {
             throw new RuntimeException(localDir + " is a file!");
         }
-        hfs.copyToLocalFile(remotePath, new Path(localDir));
+        hfs.copyToLocalFile(delete, remotePath, new Path(localDir));
     }
 
     private static void mergeFile(String tempDir, String finalFile) throws Exception {
